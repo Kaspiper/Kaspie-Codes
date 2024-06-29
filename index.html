@@ -11,37 +11,111 @@
 
 
 <body>
+    <header class="header-container"  id ="top-bar">
+        <div class="stripe"></div>
+        <nav id="desktop-nav">
+            <div class="logo"> < KASPIE CODES > </div>
+            <div>
+                <ul class="nav-links">
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#experience">EXPERIENCE</a></li>
+                    <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
     
-    <nav id="desktop-nav">
-        <div class="logo">KASPIE CODES</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#experience">EXPERIENCE</a></li>
-                <li><a href="#projects">PROJECTS</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-
-            </ul>
-        </div>
-    </nav>
-    <nav id ="hamburger-nav">
-        <div class = "logo">Kaspie Codes</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+                </ul>
             </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">ABOUT</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">EXPERIENCE</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">PROJECTS</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">CONTACT</a></li>
+        </nav>
+        <nav id ="hamburger-nav">
+            <div class = "logo"> < KASPIE CODES > </div>
+            <div class="hamburger-menu">
+                <button class="TESTBTN" onclick="toggleMenu()">
+                     <div class="hamburger-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                <div class="menu-links">
+                    <li><a href="#about" onclick="toggleMenu()">ABOUT</a></li>
+                    <li><a href="#experience" onclick="toggleMenu()">EXPERIENCE</a></li>
+                    <li><a href="#projects" onclick="toggleMenu()">PROJECTS</a></li>
+                    <li><a href="#contact" onclick="toggleMenu()">CONTACT</a></li>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="profile">
+        <div>
+            <div class="section__pic-container">
+                <img src="./assets/profile.png" alt="Kaspie profie picture">
+            </div>
+            <div class="section__text">
+              
+                <h1 class="title">Kasper Lau</h1>
+                <p class="section__text__p2">Student / Software Engineer</p>
+                <div class="btn-container">
+                    <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">
+                        Download CV
+                    </button>
+                    <button class="btn btn-color-1" onclick="location.href='./#contact'">
+                        Contact Info
+                    </button>
+                </div>
+                <div id="socials-container">
+                    <img src="./assets/linkedin.png" alt="My Linkedin Profile" class="icon" onclick="location.href='https://www.linkedin.com/in/kasper-lau-8aa416291/'"/>
+                    <img src="./assets/github.png" alt="Github Profile" class ="icon" onclick="location.href='https://github.com/Kaspiper'">
+                </div>
             </div>
         </div>
         
+    </section>
 
-    </nav>
+    
+    <section id="about">
+        <h1 class="title">Who Am I?</h1>
+        <div class="section-container">
+            <div class="about-pic-container">
+                <img src="./assets/aboutme.png" alt="Profile picture" class="about-pic"> 
+            </div>
+
+            <div class="text-container">
+                <div class="introduction-text">
+                    <p class="intro-paragraph">Kasper was born and raised in Fremont, a suburb within California's San Francisco Bay area.
+                        He is currently pursuing a Bachelor's degree in Computer Science and Engineering with a minor in 
+                        Mathematics at The Ohio State University. When Kasper is home for the summer, he enjoys traveling
+                        with friends, working on projects, and playing sports.
+        
+                    </p>
+                    <p class="intro-paragraph"><br /></p>
+                    <hr noshade="" class="intro-paragraph">
+                    <p class="intro-paragraph"><br /></p>
+
+                    <p class="intro-paragraph">Disciplines of Interest: <br /> Cyber Security, Computer Systems, Machine Learning, Web Development</p>
+                </div>
+            </div>
+
+       
+            <div class="experience-education-container">
+                <div class="experience-container">
+                    <img src="./assets/experience.png" alt="Experience icon" class="icon">
+                    <h3>Experience</h3>
+                    <p>X years <br />Frontend Development</p>
+                </div>
+                <div class="education-container">
+                    <img src="./assets/education.png" alt="Education icon" class="icon">
+                    <h3>Education</h3>
+                    <p>THE OHIO STATE UNIVERSITY<br />COMPUTER SCIENCE AND ENGINEERING <br />Class Of 2026</p>
+                </div>
+                    
+            </div>
+            
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'">
+    </section>
+
+
+    
     <script src="script.js"></script>
 
 </body>
