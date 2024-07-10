@@ -13,6 +13,19 @@
     #profile{
         padding-top: 13vh;
     }
+
+    .section-container{
+        flex-direction: column;
+    }
+    .about-pic-container{
+        display: flex;
+        justify-content: center;
+    }
+    .about-pic{
+        max-width: 35%;
+        height: auto;
+    }
+
 }
 @media screen and (max-width: 800px){
     .logo{
