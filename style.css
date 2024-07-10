@@ -352,7 +352,7 @@ section{
     /* border: black 0.1rem solid; */
     border-radius: 2rem;
     text-align: center;
-    box-shadow: 0 0 12px 0 brown;
+    box-shadow: 0 0 12px 0 green;
 }
 .intro-paragraph{
     color: black;
@@ -383,7 +383,7 @@ section{
     margin: 4rem;
     border-radius: 2rem;
     /* border: black 0.1rem solid; */
-    box-shadow: 0 0 12px 0 brown;
+    box-shadow: 0 0 12px 0 green;
 }
 .logo-row{
     display: flex;
@@ -417,7 +417,7 @@ section{
     border-radius: 2rem;
     text-align: center;
     /* border: black 0.1rem solid; */
-    box-shadow: 0 0 12px 0 brown;
+    box-shadow: 0 0 12px 0 green;
     
 }
 .education-details-container{
@@ -462,7 +462,7 @@ section{
 .project-container:hover{ 
     
     transition: 300ms ease-in-out;
-    box-shadow: 0 0 12px 0 brown;
+    box-shadow: 0 0 12px 0 green;
 }
 
 .project-pic{
@@ -474,6 +474,10 @@ section{
     
     margin-left:1rem;
 } 
+
+.project-description{
+    flex-grow: 4;
+}
 .project-tag-container{
     display: flex;
     flex-direction: column;
