@@ -226,7 +226,7 @@ section{
     margin-left: 4rem;
     margin-right: 4rem;
     gap: 2rem;
-    border-right: black dashed 0.2rem;
+    /* border-right: black dashed 0.2rem; */
     
 }
 .profile-pic{
