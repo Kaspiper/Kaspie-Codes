@@ -318,6 +318,7 @@ section{
 
 /* ABOUT TEXT */
 .introduction-text-container{
+    padding-top: 3rem;
     margin-right: 6rem;
 }
 .introduction-text{

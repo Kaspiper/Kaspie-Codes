@@ -12,18 +12,17 @@
     }
     #profile{
         padding-top: 13vh;
+        flex-direction: column;
+        justify-content: space-around;
+        height: auto;
     }
 
-    .section-container{
-        flex-direction: column;
-    }
     .about-pic-container{
         display: flex;
         justify-content: center;
     }
-    .about-pic{
-        max-width: 35%;
-        height: auto;
+    .introduction-text-container{
+        margin: 3rem;
     }
 
 }
