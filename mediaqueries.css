@@ -1,6 +1,7 @@
 
 /*When the screen is smaller than 1200px, then use the hamburger menu*/
 @media screen and (max-width: 1200px){
+    /* HEADER */
     #desktop-nav{
         display:none;
     }
@@ -10,29 +11,153 @@
     #top-bar{
         position:relative;
     }
+    /* PROFILE and ABOUT */
     #profile{
         padding-top: 13vh;
         flex-direction: column;
         justify-content: space-around;
         height: auto;
     }
-
-    .about-pic-container{
-        display: flex;
-        justify-content: center;
+    .profile-container{
+        margin-left: 4rem;
+        margin-right: 4rem;
+        padding-right: 0;
+        border: none;
     }
+  
     .introduction-text-container{
+        padding-top: 0;
         margin: 3rem;
     }
+    .introduction-text{
+        padding: 1rem;
+    }
+    .intro-paragraph{
+        font-size: 1rem;
+    }
+
+    /* EXPERIENCE SECTION */
+
+    #experience{
+        padding-top: 12vh;
+    }
+
+    .title-container{
+        border: none;
+        margin-left: 0;
+        padding-left: 0;
+    }
+    .title{
+        font-size: 3rem;
+        text-align: center;
+    }
+    .title-subtext{
+        font-size: 1rem;
+        text-align: center;
+    }
+    .osulogo{
+        display: none;
+    }
+    .education-details-container{
+        display: none;
+    }
+    .education-extra{
+        display: contents;
+    }
+    .logo-grid{
+        padding: 0;
+    }
+    #first-row .logo-container .xplogo{
+        max-width: 50%;
+        height: auto;
+    }
+    #third-row .logo-container .xplogo{
+        max-width: 85%;
+        height: auto;
+    }
+
+
+
+
+
+  /* PROJECTS SECTION */
+    #projects{
+        padding-top: 12vh;
+    } 
+   
+    .project-tag-container{
+        display: none;
+    }
+    
 
 }
+
+
+
+
 @media screen and (max-width: 800px){
     .logo{
         font-size: 3.5rem;
+    }
+    .profile-pic{
+        max-height: 250px;
+    }
+    .title{
+        font-size: 2rem;
+    }
+    .title-subtext{
+        font-size: 0.75rem;
+    }
+
+    .intro-paragraph{
+        font-size: 0.75rem;
+    }
+    .logo-grid{
+        margin-top: 1rem;
+    }
+    .experience-education-container p{
+        font-size: 0.75rem;
+    }
+    .experience-education-container h3{
+        font-size: 0.75rem;
+    }
+    .experience-education-container img{
+        display: none;
+    }
+    .project-list{
+        margin-top: 0;
+        padding-top: 0;
+    }
+    .project-container{
+        align-content: center;
+        flex-direction: column;
+    }
+    .project-pic-container{
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+        margin-left: 0;
+     
+    }
+    .project-pic{
+        height: auto;
+        max-width:  85%;
+    }
+    .project-description{
+        text-align: center;
+    }
+    .project-description p{
+        font-size: 0.75rem;
+        margin: 1rem;
     }
 }
 @media screen and (max-width: 600px){
     .logo{
         font-size: 2.5rem;
+    }
+}
+@media screen and (max-width: 450px){
+    .logo{
+        font-size: 2rem;
     }
 }

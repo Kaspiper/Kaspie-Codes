@@ -89,8 +89,10 @@
    
     
     <section id="experience">
-        <h1 class="title">Experience</h1>
-        <h3 class="experience-subtext">In the past, I've worked with. . . </h3>
+        <div class="title-container">
+            <h1 class="title">Experience</h1>
+            <h3 class="title-subtext">In the past, I've worked with. . . </h3>
+        </div>
         <div class="logo-grid">
             <div class="logo-row" id="first-row">
                 <div class="logo-container">
@@ -132,8 +134,15 @@
          <div class="experience-education-container">
             <div class="education-container">
                 <img src="./assets/education.png" alt="Education icon" class="icon">
-                <h3>Education</h3>
-                <p>THE OHIO STATE UNIVERSITY<br />Class Of 2026</p>
+                <div class="education-detail-text">
+                    <h3>Education</h3>
+                    <p>THE OHIO STATE UNIVERSITY<br />Class of 2026</p>
+                </div>
+                <div class="education-extra">
+                    <h3>GPA: 3.922</h3>
+                    <p>B.S. COMPUTER SCIENCE AND ENGINEERING<br />with a minor in Mathematics</p>
+                </div>
+                
             </div>  
             <div class="education-details-container">
                 <div>
@@ -144,14 +153,14 @@
                     <p>B.S. COMPUTER SCIENCE AND ENGINEERING<br />with a minor in Mathematics</p>
                 </div>
             </div>
-             
         </div>
     </section>
 
     <section id="projects">
-        <h1 class="title">Projects</h1>
-        <h3 class="experience-subtext">Here are some of my past and current works. . . </h3>
-
+        <div class="title-container">
+            <h1 class="title">Projects</h1>
+            <h3 class="title-subtext">Here are some of my past and current works. . . </h3>
+        </div>
         <div class="project-list">
 
             <div class="project-container">
@@ -159,7 +168,14 @@
                     <img class="project-pic" src="assets/polynomialproject.png" alt="polynomial project">
                 </div>
                 <div class="project-description">
-                    a java class that models the nth degree algebraic polynomial expression
+                    <h3>POLYNOMIAL UTILITY</h3>
+                    <p>
+                        A java class that models the nth-degree algebraic polynomial expression
+                        with instance methods for arithmetic operation, factorization, and calculus
+                    </p>
+                    <div>
+                        <button class="project-link">View on Github</button>
+                    </div>
                 </div>
                 <div class="project-tag-container">
                     <div class="project-tag">
@@ -176,7 +192,16 @@
                 <div class="project-pic-container">
                     <img class="project-pic" src="assets/Webproject.png" alt="website project">
                 </div>
-               
+                <div class="project-description">
+                    <h3>KASPIE CODES (v1.0)</h3>
+                    <p>
+                        My personal portfolio website built from scratch and hosted 
+                        in-house on a Raspberry Pi-5. blah blah blah
+                    </p>
+                    <div>
+                        <button class="project-link">View on Github</button>
+                    </div>
+                </div>
                 <div class="project-tag-container">
                     <div class="project-tag">
                         <img src="assets/calendaricon.png" alt="calendar icon" class="icon">
@@ -186,12 +211,19 @@
                     </div>
                 </div>
             </div>
-
-
-
             <div class="project-container">
                 <div class="project-pic-container">
                     <img class="project-pic" src="assets/Dinoproject.png" alt="dino project">
+                </div>
+                <div class="project-description">
+                    <h3>DINO RUNNER</h3>
+                    <p>
+                        Classic game from Google Chrome adapted into MATLAB. This project was nominated in the 
+                        First-Year Engineering Design Showcase at The Ohio State University.
+                    </p>
+                    <div>
+                        <button class="project-link">View Documentation</button>
+                    </div>
                 </div>
                 <div class="project-tag-container">
                     <div class="project-tag">
@@ -214,6 +246,16 @@
                 <div class="project-pic-container">
                     <img class="project-pic" src="assets/Brushproject.png" alt="brush project">
                 </div>
+                <div class="project-description">
+                    <h3>HAIRBRUSH PRODUCT R&D</h3>
+                    <p>
+                        Research and design project with several prototype iterations, 
+                        fully modeled and stress-tested in CAD software 
+                    </p>
+                    <div>
+                        <button class="project-link">View Documentation</button>
+                    </div>
+                </div>
                 <div class="project-tag-container">
                     <div class="project-tag">
                         <img src="assets/calendaricon.png" alt="calendar icon" class="icon">
@@ -235,6 +277,19 @@
             <div class="project-container">
                 <div class="project-pic-container">
                     <img class="project-pic" src="assets/Fpgaproject.png" alt="ece project">
+                </div>
+                <div class="project-description">
+                    <h3>SIMON BOX GAME</h3>
+                    <p>
+                        Programmed game state machine on the provided FPGA board and external hardware using 
+                        Intel Quartus Prime, ModelSim, and VHDL to recreate the Simon Box game.
+                    </p>
+                    <div>
+                        <button class="project-link">View Documentation</button>
+                    </div>
+                       
+                    
+                    
                 </div>
                 <div class="project-tag-container">
                     <div class="project-tag">

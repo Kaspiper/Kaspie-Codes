@@ -20,6 +20,8 @@ html{
     scroll-behavior: smooth;
 }
 
+
+
 p{
     color: rgb(85, 85, 85);
    
@@ -146,6 +148,7 @@ a:hover {
 
 
 .menu-links {
+    margin-top: 2rem;
     position: absolute;
     top: 100%;
     right: 0%;
@@ -223,15 +226,16 @@ section{
 .profile-container{
     display: flex;
     flex-direction: column;
-    margin-left: 4rem;
+    margin-left: 8rem;
     margin-right: 4rem;
     gap: 2rem;
-    /* border-right: black dashed 0.2rem; */
+    padding-right: 2rem;
+    border-right: rgb(85, 85, 85) dotted 0.2rem;
     
 }
 .profile-pic{
     max-height:300px ;
-    height: auto;
+    
 }
 .profile-pic-container{
     align-self: center;
@@ -253,9 +257,21 @@ section{
     margin-top: 0.5rem;
     margin-bottom: 1rem;
 }
+.title-container{
+    margin-left: 8rem;
+    border-left: rgb(85, 85, 85) dotted 0.2rem;
+    /* border-radius: 2rem; */
+    padding-left: 2rem;
+
+}
 .title{
-    font-size: 3rem;
-    text-align: center;
+    font-family: "Source Code Pro", monospace;
+    font-size: 3.5rem;
+    text-align: left;
+}
+.title-subtext{
+    font-family: "Source Code Pro", monospace;
+    color: rgb(85, 85, 85);
 }
 
 #socials-container{
@@ -325,7 +341,7 @@ section{
     font-family: "Poppins", monospace;
     background: beige;
     padding: 3rem;
-    border-radius: 2rem;
+    border-radius: 1rem;
     text-align: center;
     box-shadow: 0 0 12px 0 green;
 }
@@ -341,13 +357,9 @@ section{
 #experience{
     padding-top: 20vh;
     font-family: "Poppins", monospace; 
+    /* font-family: "Source Code Pro", monospace; */
 }
-.experience-subtext{
-    font-family: "Source Code Pro", monospace;
-    color:rgb(85, 85, 85);
-    padding-top: 1rem;
-    text-align: center;
-}
+
 .logo-grid{
     background-color: beige;
     padding: 2rem;
@@ -374,7 +386,10 @@ section{
 }
 
 .experience-education-container{
-    margin: 4rem;
+    margin-top: 4rem;
+    margin-right: 4rem;
+    margin-left: 4rem;
+    padding-bottom: 4rem;
     gap: 2rem;
     display: flex;
 }
@@ -390,21 +405,30 @@ section{
     box-shadow: 0 0 12px 0 green;
     
 }
+
+#first-row .logo-container .xplogo{
+    max-width: 50%;
+    height: auto;
+}
 .education-details-container{
     display: flex;
 }
+.education-extra{
+    display: none;
+}
 .osulogo{
-    
     margin-top: 0.5rem;
     margin-left: 1rem;
-    width: 100px;
+    height: auto;
+    max-width: 50%;
     padding-right: 2rem;
     border-right: rgb(85, 85, 85) 2px solid;
 }
+
 .education-detail-text{
     padding: 0.5rem;
     margin: auto;
-    /* padding-top: 0.5rem; */
+    
 }
 
 /* PROJECTS SECTION */
@@ -427,38 +451,46 @@ section{
     margin-top: 2vh;
     margin-left: 0.2vw;
     margin-right: 0.2vw;
-    background-color: beige;
-    border-radius: 2rem;
+    background-color: rgb(255, 255, 243);
+    border-radius: 1rem;
 }
 
 .project-container:hover{ 
-    
+    background-color: beige;
     transition: 300ms ease-in-out;
     box-shadow: 0 0 12px 0 green;
 }
 
 .project-pic{
-    height: auto;
-    max-width:50%;
-   
+    max-width: 300px;
 }
 .project-pic-container{
-    
+    max-width: 20rem;
     margin-left:1rem;
 } 
 
 .project-description{
-    flex-grow: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2%;
+    /* border: solid black 0.1rem; */
+    
+}
+.project-description p{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 .project-tag-container{
+    /* border: solid black 0.1rem; */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     margin-top: 0.5rem;
     margin-right: 1rem;
     height: auto;
-    max-width: 300px;
-    /* border: solid black 0.1rem; */
+    max-width: 500px;
+    
     padding-top: 0.5rem;
 }
 .project-tag{
@@ -467,13 +499,28 @@ section{
     display: flex;
     border: solid black 0.1rem;
     border-radius: 2rem;
-    max-width: 300px;
+    min-width: 150px;
     padding-left: 0.25rem;
     padding-right: 0.25rem;
     justify-content: center;
 }
 .project-tag-label{
-    margin: 0.5rem;
+    text-wrap: nowrap;
+    font-size:0.75rem;
+    margin: 0.75rem;
+}
+.project-link{
+    background: none;
+    font-weight: 600;
+    border: 0.1rem solid black;
+    border-radius: 2rem;
+    padding: 1rem;
+    margin-bottom: 0;
+}
+.project-link:hover{
+    transition: 300ms ease-in;
+    background: black;
+    color: beige;
 }
 
 
