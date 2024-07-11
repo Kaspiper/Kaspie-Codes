@@ -210,28 +210,32 @@ section{
     min-height: fit-content;
 }
 
-.section-container{
-    display: flex;
-}
-
 /* PROFILE SECTION */
 
 #profile{
+    display: flex;
+    justify-content: center;
     padding-top: 30vh;
-    display:flex;
-    justify-content:center;
-    gap: 5rem;
-    height: 120vh;
+    gap: 0rem;
+    height: 100vh;
 }
 
-.section__pic-container{
-    display:flex; 
-    height: 350px;
-    margin: auto 0;
-    
+.profile-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    gap: 2rem;
+    border-right: black dashed 0.2rem;
     
 }
-
+.profile-pic{
+    max-height:300px ;
+    height: auto;
+}
+.profile-pic-container{
+    align-self: center;
+}
 .section__text{
     
     align-self: center;
@@ -312,60 +316,26 @@ section{
     gap: 1rem;
 }
 
-/* ABOUT SECTION */
-
-
-
-#about{
-    font-family: "Poppins", monospace;
-    padding-top: 20vh;
-    height: 100vh;
-}
-
-.section-container{
-    margin-left: 4rem;
-    margin-right: 4rem;
-    display: flex;
-    justify-content:left;
-    gap: 2rem;
-    
-}
-
-.about-pic-container{
-    margin-top: 4.5rem;
-}
-.about-pic{
-    height: 300px ;
-}
-
-.text-container{
-    margin-top: 5rem;
-    
+/* ABOUT TEXT */
+.introduction-text-container{
+    margin-right: 6rem;
 }
 .introduction-text{
     font-family: "Poppins", monospace;
     background: beige;
-    height: 250px;
-    padding-top: 2rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    /* border: black 0.1rem solid; */
+    padding: 3rem;
     border-radius: 2rem;
     text-align: center;
     box-shadow: 0 0 12px 0 green;
 }
+
 .intro-paragraph{
     color: black;
 }
-.arrow{
-    position: fixed;
-    right: 2.5rem;
-    bottom: 2.5rem;
-}
 
 
 
-
+/* EXPERIENCE EDUCATION SECTION */
 
 #experience{
     padding-top: 20vh;
@@ -398,7 +368,6 @@ section{
     margin-top: 2rem;
 }
 .xplogo{
-   align-items: center;
     max-width: 70%;
     height: auto;
 }
@@ -436,6 +405,8 @@ section{
     margin: auto;
     /* padding-top: 0.5rem; */
 }
+
+/* PROJECTS SECTION */
 
 #projects{
     padding-top: 20vh;
