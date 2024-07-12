@@ -9,11 +9,13 @@
 * {
     margin: 0;
     padding: 0;
+
 }
 
 
 body {
   font-family: "Source Code Pro", monospace;
+  background: rgb(255, 255, 243)
 }
 
 html{
@@ -38,7 +40,7 @@ a,
 .header-container{
     position: fixed;
     background-color: rgb(99, 201, 99);
-    height: 17vh;
+    height: 130px;
     width: 100vw;
     box-shadow: 0px -15px 20px 10px green;
     opacity: 97%;
@@ -46,7 +48,7 @@ a,
 
 .header-container.shadow{
     box-shadow: 0px -10px 20px 10px green;
-    transition: box-shadow 600ms ease-in-out;
+    transition: 600ms ease-in-out;
 }
 
 .stripe{
@@ -62,7 +64,7 @@ nav,
 nav{
     justify-content: space-around;
     align-items: center;
-    height: 16vh;
+    height: 120px;
 }
 
 .nav-links{
@@ -220,13 +222,14 @@ section{
     justify-content: center;
     padding-top: 30vh;
     gap: 0rem;
-    height: 100vh;
+    height: fit-content;
+    
 }
 
 .profile-container{
     display: flex;
     flex-direction: column;
-    margin-left: 8rem;
+    margin-left: 6rem;
     margin-right: 4rem;
     gap: 2rem;
     padding-right: 2rem;
@@ -318,7 +321,7 @@ section{
 .btn-color-2:hover{
     /* background: burlywood; */
     background: rgb(99, 201, 99);
-    color:beige;
+    color:rgb(255, 255, 243);
 }
 
 .btn-color-1:hover{
@@ -333,28 +336,80 @@ section{
 }
 
 /* ABOUT TEXT */
-.introduction-text-container{
+.introduction-education-container{
     padding-top: 3rem;
     margin-right: 6rem;
 }
 .introduction-text{
     font-family: "Poppins", monospace;
-    background: beige;
+    /* background: beige; */
     padding: 3rem;
     border-radius: 1rem;
     text-align: center;
-    box-shadow: 0 0 12px 0 green;
+    /* border: solid rgb(85, 85, 85) 0.2rem;  */
+    /* box-shadow: 0 0 12px 0 green; */
 }
 
 .intro-paragraph{
     color: black;
 }
 
+/* TODO EDUCATION STYLING */ 
+.education-container{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.education-details-container{
+    max-width: fit-content;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    border: rgb(85, 85, 85) solid 1px;
+    
+    border-radius: 1rem;
+    background: rgb(255, 255, 243);
+}
+.education-details-container:hover{
+    cursor: pointer;
+    transition: 300ms ease-in;
+    background-color: beige;
+    
+    box-shadow: 0 0 12px 0 green;
+}
+.osulogo-container{
+    margin-right: -1;
+}
+.osulogo{
+    padding-right: 2rem;
+    border-right: rgb(85, 85, 85) solid 0.2rem;
+    height: auto;
+    max-width: 5rem;
+}
+
+.education-detail-text{
+    text-align: left;
+    margin-left: 0.5rem;
+    padding: 0.5rem;
+}
+.education-detail-text h3{
+    font-family: "Source Code Pro", monospace;
+    font-size: 1rem;
+    text-wrap: nowrap;
+}
+.education-detail-text p{
+    font-family: "Source Code Pro", monospace;
+    font-size: 0.7rem;
+}
 
 
-/* EXPERIENCE EDUCATION SECTION */
+
+/* EXPERIENCE SECTION */
 
 #experience{
+    /* height: 120vh; */
     padding-top: 20vh;
     font-family: "Poppins", monospace; 
     /* font-family: "Source Code Pro", monospace; */
@@ -364,6 +419,7 @@ section{
     background-color: beige;
     padding: 2rem;
     margin: 4rem;
+    
     border-radius: 2rem;
     /* border: black 0.1rem solid; */
     box-shadow: 0 0 12px 0 green;
@@ -384,52 +440,11 @@ section{
     max-width: 70%;
     height: auto;
 }
-
-.experience-education-container{
-    margin-top: 4rem;
-    margin-right: 4rem;
-    margin-left: 4rem;
-    padding-bottom: 4rem;
-    gap: 2rem;
-    display: flex;
-}
-
-.education-container, .education-details-container{
-    padding: 1rem;
-    flex: 2;
-    color: black;
-    background: beige;
-    border-radius: 2rem;
-    text-align: center;
-    /* border: black 0.1rem solid; */
-    box-shadow: 0 0 12px 0 green;
-    
-}
-
 #first-row .logo-container .xplogo{
     max-width: 50%;
     height: auto;
 }
-.education-details-container{
-    display: flex;
-}
-.education-extra{
-    display: none;
-}
-.osulogo{
-    margin-top: 0.5rem;
-    margin-left: 1rem;
-    height: auto;
-    max-width: 50%;
-    padding-right: 2rem;
-    border-right: rgb(85, 85, 85) 2px solid;
-}
 
-.education-detail-text{
-    padding: 0.5rem;
-    margin: auto;
-    
-}
 
 /* PROJECTS SECTION */
 
