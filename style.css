@@ -416,10 +416,8 @@ section{
 /* EXPERIENCE SECTION */
 
 #experience{
-    /* height: 120vh; */
     padding-top: 20vh;
-    font-family: "Poppins", monospace; 
-    /* font-family: "Source Code Pro", monospace; */
+    font-family: "Source Code Pro", monospace;
 }
 
 .logo-grid{
@@ -428,10 +426,9 @@ section{
     margin: 4rem;
     margin-left: 16rem;
     margin-right: 16rem;
-    border-radius: 2rem;
-    /* background-color: beige; */
-    border: black 1px dotted;
-    /* box-shadow: 0 0 12px 0 green; */
+    border-radius: 1rem;
+    border-right: black 2px solid;
+    border-left: black 2px solid;
 }
 .logo-row{
     display: flex;
