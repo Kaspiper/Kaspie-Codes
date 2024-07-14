@@ -59,6 +59,8 @@
 
     .logo-grid{
         padding: 0;
+        margin-left: 6rem;
+        margin-right: 6rem;
     }
     #first-row .logo-container .xplogo{
         max-width: 50%;
@@ -102,6 +104,8 @@
     }
     .logo-grid{
         margin-top: 1rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
     }
    
     .project-list{
@@ -144,7 +148,8 @@
         padding-right: 0.7rem;
     }
     .education-detail-text{
-        margin-left: 1rem;
+        padding-top: 0.75rem;
+        margin-left: 0.5rem;
         
     }
     .education-detail-text h3{
@@ -156,11 +161,17 @@
 
 }
 @media screen and (max-width: 602px){
+    .contact-container span{
+        display: none;
+    }
     .logo{
         font-size: 2.5rem;
     }
 }
 @media screen and (max-width: 450px){
+    .education-details-container{
+        padding: 0.5rem;
+    }
     .osulogo{
         max-width: 4rem;
     }

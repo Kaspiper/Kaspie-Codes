@@ -40,7 +40,8 @@ a,
 .header-container{
     position: fixed;
     background-color: rgb(99, 201, 99);
-    height: 130px;
+    height: 17vh;
+    min-height: 100px;
     width: 100vw;
     box-shadow: 0px -15px 20px 10px green;
     opacity: 97%;
@@ -48,7 +49,7 @@ a,
 
 .header-container.shadow{
     box-shadow: 0px -10px 20px 10px green;
-    transition: 600ms ease-in-out;
+    transition: box-shadow 600ms ease;
 }
 
 .stripe{
@@ -64,7 +65,8 @@ nav,
 nav{
     justify-content: space-around;
     align-items: center;
-    height: 120px;
+    height: 16vh;
+    min-height: 100px;
 }
 
 .nav-links{
@@ -376,9 +378,14 @@ section{
     cursor: pointer;
     transition: 300ms ease-in;
     background-color: beige;
-    
+
     box-shadow: 0 0 12px 0 green;
 }
+.education-details-container:hover .education-detail-text{
+    transition: 300ms ease-in-out;
+    text-indent: 2%;
+}
+
 .osulogo-container{
     margin-right: -1;
 }
@@ -416,13 +423,15 @@ section{
 }
 
 .logo-grid{
-    background-color: beige;
+    
     padding: 2rem;
     margin: 4rem;
-    
+    margin-left: 16rem;
+    margin-right: 16rem;
     border-radius: 2rem;
-    /* border: black 0.1rem solid; */
-    box-shadow: 0 0 12px 0 green;
+    /* background-color: beige; */
+    border: black 1px dotted;
+    /* box-shadow: 0 0 12px 0 green; */
 }
 .logo-row{
     display: flex;
@@ -439,6 +448,7 @@ section{
 .xplogo{
     max-width: 70%;
     height: auto;
+    
 }
 #first-row .logo-container .xplogo{
     max-width: 50%;
@@ -496,6 +506,10 @@ section{
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+.project-description a{
+    color: rgb(85, 85, 85);
+    text-decoration: underline;
+}
 .project-tag-container{
     /* border: solid black 0.1rem; */
     display: flex;
@@ -538,4 +552,63 @@ section{
     color: beige;
 }
 
+/* CONTACT SECTION */
+.footer{
+    margin-top: 20vh;
+    background-color: rgb(99, 201, 99);
+    height: 20vh;
+    min-height: 150px;
+    opacity: 80%;
+    box-shadow: 0px 12px 20px 10px green;
+}
+
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem;
+    text-align: center;
+    
+}
+.contact-container hr{
+    width: 50rem;
+    height: 0px;
+    background-color: black;
+    border: black solid 1px;
+    border-radius: 3rem;
+}
+.contact-container h6{
+    text-wrap: nowrap;
+}
+.footer-bar{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+#footer-top hr{
+    margin-top: 0.35rem;
+}
+.email-container{
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.email-container h4{
+    margin-top: 0.3rem;
+}
+.email-container:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#footer-bottom hr{
+    margin-top: 0.8rem;
+}
 
