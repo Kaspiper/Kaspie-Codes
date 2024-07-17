@@ -41,7 +41,7 @@ a,
     position: fixed;
     background-color: rgb(99, 201, 99);
     height: 17vh;
-    min-height: 100px;
+    min-height: 130px;
     width: 100vw;
     box-shadow: 0px -15px 20px 10px green;
     opacity: 97%;
@@ -66,7 +66,7 @@ nav{
     justify-content: space-around;
     align-items: center;
     height: 16vh;
-    min-height: 100px;
+    min-height: 130px;
 }
 
 .nav-links{
