@@ -15,21 +15,22 @@
     <header class="header-container"  id ="top-bar">
         <div class="stripe"></div>
         <nav id="desktop-nav">
-            <div class="logo"> < KASPIE CODES > </div>
+            
+            <div class="logo" id="DesktopLogo"></div>
             <div>
-                <ul class="nav-links">
+                <ul id="DesktopHeaderMenu" class="nav-links">
                     <li><a href="#profile">ABOUT</a></li>
                     <li><a href="#experience">EXPERIENCE</a></li>
                     <li><a href="#projects">PROJECTS</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="#contact" onclick = "contactEffects()">CONTACT</a></li>
     
                 </ul>
             </div>
         </nav>
         <nav id ="hamburger-nav">
-            <div class = "logo"> < KASPIE CODES > </div>
+            <div class ="logo" id = "MobileLogo"></div>
             <div class="hamburger-menu">
-                <button class="TESTBTN" onclick="toggleMenu()">
+                <button id="MobileHeaderMenu" class="TESTBTN" onclick="toggleMenu()">
                      <div class="hamburger-icon">
                         <span></span>
                         <span></span>
@@ -172,6 +173,14 @@
                             2024 - CURRENT
                         </div>
                     </div>
+                    
+                    <div class="project-tag" id ="PolynomialProgress" onclick="location.href='progress'">
+                        <div class="project-tag-label" >
+                            Progress
+                        </div>
+                        <img src="assets/arrow.png" alt="calendar icon" class="icon">
+                    </div>
+
                 </div>
             </div>
 
@@ -198,8 +207,19 @@
                             2024 - CURRENT
                         </div>
                     </div>
+
+
+                    <div class="project-tag" id ="KaspieCodesProgress" onclick="location.href='progress'">
+                        <div class="project-tag-label" >
+                            Progress
+                        </div>
+                        <img src="assets/arrow.png" alt="calendar icon" class="icon">
+                    </div>
                 </div>
+
             </div>
+
+
             <div class="project-container">
                 <div class="project-pic-container">
                     <img class="project-pic" src="assets/Dinoproject.png" alt="dino project">
@@ -295,6 +315,20 @@
                     </div>
             </div>
         </div>
+
+
+        
+        <div class="project-container" id="Progress-Button-Container">
+    
+            <button id="Progress-Button" onclick="location.href='progress/index.html'">
+                See Progress
+            </button>
+     
+        </div>
+
+
+
+
     </section>
     
     
@@ -306,12 +340,13 @@
                 <h6>Currently seeking internships<span>, co-ops, and other employment opportunities</span></h6>
                 <hr>
             </div>
-          
-            <div class="email-container" onclick="location.href='mailto:Kasper.c.lau@gmail.com'">
-                <img src="assets/email.png" alt="email icon" class="icon">
-                <h4>Kasper.c.lau@gmail.com</h4>
-            </div>
 
+            <div class="email-container-effect">
+                <div class="email-container" onclick="location.href='mailto:Kasper.c.lau@gmail.com'">
+                    <img src="assets/email.png" alt="email icon" class="icon">
+                    <h4>Kasper.c.lau@gmail.com</h4>
+                </div>
+            </div>
             <div class="footer-bar" id="footer-bottom">
                 <hr>
                 <img src="assets/linkedin.png" alt="linkedin icon" class="icon" onclick="location.href='https://www.linkedin.com/in/kasper-lau-8aa416291/'">

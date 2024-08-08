@@ -4,9 +4,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-* {
+*{
     margin: 0;
     padding: 0;
 
@@ -14,8 +15,9 @@
 
 
 body {
-  font-family: "Source Code Pro", monospace;
-  background: rgb(255, 255, 243)
+    
+    font-family: "Source Code Pro", monospace;
+    background: rgb(255, 255, 243)
 }
 
 html{
@@ -38,6 +40,7 @@ a,
 
 
 .header-container{
+    z-index: 1;
     position: fixed;
     background-color: rgb(99, 201, 99);
     height: 17vh;
@@ -57,12 +60,9 @@ a,
     background-color: green;
 }
 
-nav,
-.nav-links{
-    display: flex;
-}
 
 nav{
+    display: flex;
     justify-content: space-around;
     align-items: center;
     height: 16vh;
@@ -70,9 +70,19 @@ nav{
 }
 
 .nav-links{
+    opacity: 0;
+    display: flex;
     gap: 2rem;
     list-style: none;
     font-size: 1.5rem;
+    /* animation-name: fadeIn; */
+    animation-timing-function: ease;
+    animation-duration: 0.5s;
+    
+}
+@keyframes fadeIn {
+    from{opacity: 0;}
+    to{opacity: 1;}
 }
 
 a {
@@ -105,12 +115,18 @@ a:hover {
 }
 
 .TESTBTN{
-   
+    opacity: 0;
     border: 2px solid beige;
     padding: 1rem;
     width: 4rem;
     border-radius: 2rem;
     background-color: rgb(99, 201, 99);
+    animation-timing-function: cubic-bezier();
+    animation-duration: 1s;
+}
+@keyframes testbtnfadein {
+    from{opacity: 0;}
+    to{opacity: 100;}
 }
 
 .TESTBTN:hover{
@@ -187,7 +203,14 @@ a:hover {
     list-style: none;
 }
 
+@keyframes openmenu {
+    from {max-height: 0px;}
+    to {max-height: 300px;}
+}
+
 .menu-links.open{
+    animation-name: openmenu;
+    animation-duration: 0.5s;
     max-height: 300px;
 }
 
@@ -215,7 +238,15 @@ section{
     margin: 0rem;
     box-sizing: border-box;
     min-height: fit-content;
+    opacity: 0;
+    animation-duration: 2s;
+    animation-timing-function: ease;
 }
+@keyframes showsections {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
 
 /* PROFILE SECTION */
 
@@ -321,7 +352,6 @@ section{
 
 .btn-color-1,
 .btn-color-2:hover{
-    /* background: burlywood; */
     background: rgb(99, 201, 99);
     color:rgb(255, 255, 243);
 }
@@ -343,13 +373,10 @@ section{
     margin-right: 6rem;
 }
 .introduction-text{
-    font-family: "Poppins", monospace;
-    /* background: beige; */
+    font-family: "Work Sans", monospace;
     padding: 3rem;
     border-radius: 1rem;
     text-align: center;
-    /* border: solid rgb(85, 85, 85) 0.2rem;  */
-    /* box-shadow: 0 0 12px 0 green; */
 }
 
 .intro-paragraph{
@@ -496,8 +523,6 @@ section{
     flex-direction: column;
     justify-content: space-around;
     padding: 2%;
-    /* border: solid black 0.1rem; */
-    
 }
 .project-description p{
     margin-top: 1rem;
@@ -508,7 +533,7 @@ section{
     text-decoration: underline;
 }
 .project-tag-container{
-    /* border: solid black 0.1rem; */
+    
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -530,6 +555,19 @@ section{
     padding-right: 0.25rem;
     justify-content: center;
 }
+
+#PolynomialProgress:hover{
+    text-decoration: underline black 1px;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 black;
+    transition: 300ms ease;
+}
+#KaspieCodesProgress:hover{
+    text-decoration: underline black 1px;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 black;
+    transition: 300ms ease;
+}
 .project-tag-label{
     text-wrap: nowrap;
     font-size:0.75rem;
@@ -548,6 +586,33 @@ section{
     background: black;
     color: beige;
 }
+
+
+#Progress-Button-Container{
+    margin-top: 2rem;
+}
+#Progress-Button-Container:hover{
+    background-color: rgb(255, 255, 243);
+    box-shadow: none;
+}
+#Progress-Button{
+    
+    background-color: rgb(255, 255, 243);
+    color: black;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 3rem;
+    font-weight: 600;
+    border: 0.1rem solid black;
+}
+#Progress-Button:hover{
+    cursor: pointer;
+    transition: 300ms ease;
+    box-shadow: 0 0 12px 0 black;
+    
+  
+}
+
 
 /* CONTACT SECTION */
 .footer{
@@ -586,6 +651,26 @@ section{
 #footer-top hr{
     margin-top: 0.35rem;
 }
+
+
+@keyframes box-shake{
+    0% {padding-left: 0rem; padding-right: 0rem; text-shadow: green 1px 0px 0px;}
+    20% {padding-left: 0.25rem; padding-right: 0rem; text-shadow: green 1px 0px 1px;}
+    40% {padding-left: 0rem; padding-right: 0.5rem; text-shadow: green 1px 0px 3px;}
+    60% {padding-left: 0.5rem; padding-right: 0rem; text-shadow: green 1px 0px 3px;}
+    80% {padding-left: 0rem; padding-right: 0.25rem; text-shadow: green 1px 0px 1px;}
+    100% {padding-left: 0rem; padding-right: 0rem; text-shadow: green 1px 0px 0px;}
+    
+}
+.email-container-effect{
+    margin-left: auto;
+    margin-right: auto;
+}
+.email-container-effect.shake{
+    animation-name: box-shake;
+    animation-duration: 0.75s;
+
+}
 .email-container{
     display: flex;
     justify-content: center;
@@ -604,6 +689,7 @@ section{
     text-decoration: underline;
     cursor: pointer;
 }
+
 
 #footer-bottom hr{
     margin-top: 0.8rem;

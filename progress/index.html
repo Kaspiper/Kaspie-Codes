@@ -1,0 +1,741 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaspie Codes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon-32x32.png" />
+</head>
+
+
+<body>
+    <header class="header-container"  id ="top-bar">
+        <div class="stripe"></div>
+        <nav id="desktop-nav">
+            <div class="logo">&lt;KASPIE CODES/&gt;</div>
+            <div>
+                <ul class="nav-links">
+                    <li><a href="/index.html#profile">ABOUT</a></li>
+                    <li><a href="/index.html#experience">EXPERIENCE</a></li>
+                    <li><a href="/index.html#projects">PROJECTS</a></li>
+                    <li><a href="#contact" onclick = "contactEffects()">CONTACT</a></li>
+    
+                </ul>
+            </div>
+        </nav>
+        <nav id ="hamburger-nav">
+            <div class="logo">&lt;KASPIE CODES/&gt;</div>
+            <div class="hamburger-menu">
+                <button class="TESTBTN" onclick="toggleMenu()">
+                     <div class="hamburger-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                <div class="menu-links">
+                    <li><a href="/index.html#profile" onclick="toggleMenu()">ABOUT</a></li>
+                    <li><a href="/index.hmtl#experience" onclick="toggleMenu()">EXPERIENCE</a></li>
+                    <li><a href="/index.html#projects" onclick="toggleMenu()">PROJECTS</a></li>
+                    <li><a href="#contact" onclick="toggleMenu()">CONTACT</a></li>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <section id="progress">
+
+        <div class="title-container">
+            <h1 class="title">Progress</h1>
+            <h3 class="title-subtext">Updates on what I've been doing. . . </h3>
+        </div>
+
+        <div id="progress-container">
+
+            <div id="tab-container">
+                <div class="tab" id="tab1" onclick="openTab(this.id, 'alt-tab1', 'content1', 'alt-content1')">
+                    <p>Kaspie Codes (v1.1)</p>
+                </div>
+                <div class="tab" id="tab2" onclick="openTab(this.id, 'alt-tab2', 'content2', 'alt-content2')">
+                    <p>Polynomial</p>
+                </div>
+                <div class="tab" id="tab3" onclick="openTab(this.id, 'alt-tab3', 'content3', 'alt-content3')">
+                    <p>LeetCode</p>
+                </div>
+                <div class="tab" id="tab4" onclick="openTab(this.id, 'alt-tab4', 'content4', 'alt-content4')">
+                    <p>Project Euler</p>
+                </div>
+            </div>
+
+
+            <div id="content1" class="content-container">
+                <div class="content-container-buffer"></div>
+                <h1 class="monthly-header">June - July 2024 (v1.0)</h1>
+                <div class="update">
+                    <div class="update-column">
+                        <p>I started a web development project over the summer, as I thought it would be an excellent way to learn new skills and build something nice in the process.
+                            However, I disliked the idea of being dependent on subscription services like AWS, G-Cloud, etc. This opened up a new set of challenges that came with self-hosting. 
+                            Here's what I currently use to operate my website: 
+                        </p>
+                        <ul>
+                            <li>Raspberry Pi-5 as the sole hardware given that my portfolio website was not expected to receive a high volume of traffic ( > 1K Requests per day).</li>
+                            <li>Domain name rights bought from Cloudflare, for which I pay 10$ / year (Works Great!)</li>
+                            <li>SSH Daemon from OpenSSH so I can perform updates and server maintenence remotely when I leave for college</li>
+                            <li>Nginx web server software to manage HTTP requests</li>
+                            <li>Ubuntu 24.04 LTS OS</li>
+                        </ul>
+                    </div>
+                    <div class="thin-pic-container">
+                        <img src="progressassets/Progress0.png" alt="CurrentSetup0" class="progress-pic">
+                    </div>
+                    <div class="thin-pic-container">
+                        <img src="progressassets/Progress1.png" alt="CurrentSetup1" class="progress-pic">
+                    </div>
+                </div>
+
+                <h1 class="monthly-header">August 2024 (v1.1)</h1>
+                <div class="update">
+                    <div class="update-column">
+                        <p>So far in my web-devlopment journey, I realize my biggest weakness has been aesthetic design.
+                            There are an insane number of small CSS and Javascript nuances. If I don't know how to use a CSS property
+                            I can always figure it out via Stack Overflow. However, UI design isn't a skill you can master in a few months. 
+                            There are many concepts like 'white spacing' and 'color palettes' that determine if a portfolio looks professional or crude. 
+                        </p>
+                        <p>From time to time, I'll visit the greats like <a href="https://brittanychiang.com/">brittanychiang.com</a> 
+                            or <a href="https://robbowen.digital/">robbowen.digital</a> for inspiration.
+                        </p>
+                        <p>Since the v1.0, I've added a few animations, as well as this progress page that you are reading. The logo typing animation
+                            on the home page was fairly easy to accomplish in Javascript and added some personality to the portfolio. This progress page
+                            serves as a diary of sorts for my ongoing projects and other goals that I have. 
+
+                        </p>
+                        <p>
+                            This month, I leave home to study in college. I will be very busy, but there are a few things I hope to accomplish. 
+                        </p>
+                    </div>
+                </div>
+                <div class="update">
+                    <div class="update-column">
+                        <p>
+                            As it stands, Kasper Codes is a static website with no backend. Whenever I want to make a change or post progress updates on this page, 
+                            I need to edit the static html and change the raw files on my server. Adding a backend database will make posting updates effortless, 
+                            while distributing loading times evenly. For the database, I plan to use something free like Excel or Google Sheets API. 
+                            Google Sheets as a database may seem preposterous (it is), but it's free of cost and storage is on the cloud.
+                            (I don't need to SSH everytime I post progress) 
+        
+                        </p>
+                        <p>
+                            Like most Internet Service Providers, my ISP uses a dynamic IP address, which Cloudflare maps my domain name to. 
+                            While my server has been up (roughly 3 weeks), Comcast has not changed my IP address but they inevitably will in the future, 
+                            which will bring my server offline. To combat this, I plan to write a bash script to update the IP address in the Cloudflare DNS record. 
+                            While I could update the DNS record manually, this would require I monitor the status of my server constantly. To save myself from stress, 
+                            I will automate this process. 
+        
+                        </p>
+                        <div class="wide-pic-container">
+                            <img src="progressassets/Progress2.png" alt="WebTrafficFirstMonth" class="progress-pic">
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div id="content2" class="content-container">
+                <div class="content-container-buffer"></div>
+                <h1 class="monthly-header">June - July 2024 Rational Numbers</h1>
+                <div class="update">
+                    <div class="update-column">
+                        <p>
+                            I had to redesign my Polynomial utility library due to a flaw I noticed recently. Ideally, 
+                            a mathematical data type should have closure under operations. 
+                        </p>
+                        <p><code>int + int, int - int, int * int, and int / int all return the type int.</code></p>
+                        <p>
+                            Like integers, polynomials are technically not closed under division. The workaround to this is 
+                            having the method <code>'Polynomial1.divide(Polynomial2)'</code> change the value of  <code>Polynomial1</code> to the quotient
+                            and return the remainder. This works out well because the quotient and remainder of polynomial division
+                            will always fit the type <code>Polynomial</code> and no data is lost. My problem was my Polynomial class could only represent
+                            integer coefficients while needing to implement polynomial division. This was a pretty serious problem given 
+                            some polynomials could not be divided without yielding non-integer quotients or remainders. 
+                        </p>
+                        <p>
+                            I wrote a <a href="https://github.com/Kaspiper/RationalNumber">Rational Number mini-library</a>, and I quickly got carried away  
+                            and wrote a <a href="https://github.com/Kaspiper/RationalNumber/blob/main/RationalNumberParseAndCalc.java">math parser</a> to test it. 
+                            The rational number data type built consists of a BigInteger (Java math library) numerator and denominator. Representing rational numbers 
+                            as simplified fractions offers superior theoretical precision, making it perfect for polynomial arithmetic.
+                            
+                        </p>
+                        
+                        
+                    </div>
+                </div>
+                <h1 class="monthly-header">August 2024 Factorization of nth-degree Polynomials</h1>
+                <div class="update">
+                    <div class="update-column">
+                        <p>Since implementing polynomials with rational coefficients, I've finished writing functions for integrals and derivatives
+                            as well as division. Now that I can calculate if one polynomial is divisible by another, I have the tools needed to start tackling
+                            some harder problems, namely the polynomial factoring algorithm.
+                        </p>
+                    </div>
+                </div>
+                <div class="update">
+                    <div class="update-column">
+                        <p>When I brought this problem up to my algorithms professor last semester at Ohio State, he described it as a "hard problem" 
+                            though I wasn't sure if he meant 'difficult' or 'NP-Hard'. The modern way of solving high degree polynomials 
+                            involve approximations like <a href="https://en.wikipedia.org/wiki/Newton%27s_method">Newton's Method</a> 
+                            and the <a href="https://en.wikipedia.org/wiki/Bisection_method">Bisection Method</a>. There is also no formula 
+                            to solve polynomials of degree &#8805; 5. By solve, I mean decompose the polynomial into a product of 
+                            irreducible polynomial factors. This is similar to the root-finding problem, only root-finding also isolates complex roots.
+                        
+                        </p>
+                        <p>
+                            If I can, I would much prefer to solve polynomials analytically instead of using approximations. While I don't have much
+                            knowledge in abstract algebra, I have a pretty good idea of where to start looking: 
+                        </p>
+                        <ul>
+                            <li>Galois Fields and Polynomial Rings</li>
+                            <li>Kronecker's Method (1882)</li>
+                            <li>Berlekamp's Algorithm (1967)</li>
+                            <li>Yun's Algorithm (1973)</li>
+                            <li>Cantor-Zassenhaus Algorithm (1981)</li>
+                        </ul>
+                        <p>
+                            I am taking Math 3345 at Ohio State which should strengthen my background in theoretical math. Hopefully by the end of this semester,
+                            I would have learned enough to implement an existing algorithm or something similar. 
+                        </p>
+                    </div>
+                    <div class="square-pic-container">
+                        <iframe height="40%" src="https://www.youtube.com/embed/BSHv9Elk1MU" title="Why There&#39;s &#39;No&#39; Quintic Formula (proof without Galois theory)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe height="40%" src="https://www.youtube.com/embed/C14td3kXdsM" title="Guo. Factoring polynomials over finite fields with linear Galois groups: an additive ..." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div id="content3" class="content-container">
+                <div class="content-container-buffer"></div>
+                <h1 class="monthly-header">August 2024</h1>
+                <div class="update">
+                    <div class="update-column">
+                        <p>
+                            <i>
+                                "LeetCode is an online platform for coding interview preparation. The service provides coding and algorithmic problems intended for users to practice coding.
+                                LeetCode has gained popularity among job seekers and coding enthusiasts as a resource for technical interviews and coding competitions. . . 
+                                LeetCode offers 3236 questions across its three levels of difficulty; with 801 questions categorized as easy, 1679 as medium, and 713 as hard. "
+                            </i> - WIKIPEDIA
+                        </p>
+                        <p>
+                            My goal is to stay sharp by challenging myself with coding problems and mental exercises. I believe that 
+                            working in small amounts (&#8804; 1 hour) every day is a good strategy for me. From my previous experience, 
+                            I know working too hard for long sessions is an easy way to burn out and lose consistency. 
+                        </p>
+                        <p>
+                            I plan to begin completing problems when I start autumn semester at Ohio State. Quality is more important than quantity in my opinion. 
+                            Using the limited time I have, I prefer one fast and/or elegant solution over three brute-force solutions. I will be publicly posting my progress
+                            here periodically, as a form of accountability. If you (the person visiting my website) are reading this there isn't a 
+                            progress update within the next few months, feel free to send shame via email: Kasper.c.lau@gmail.com. 
+                        </p>
+                        <p>Happy Coding!</p>
+                       
+                    </div>
+                </div>
+            </div>
+            <div id="content4" class="content-container">
+                <div class="content-container-buffer"></div>
+                <h1 class="monthly-header">August 2024</h1>
+                <div class="update">
+                    <div class="update-column">
+                        <p>
+                            <i>
+                                "Project Euler (named after Leonhard Euler) is a website dedicated to a series of computational problems intended to be solved with computer programs.
+                                The project attracts graduates and students interested in mathematics and computer programming. Since its creation in 2001 by Colin Hughes, Project Euler has gained notability and popularity worldwide.
+                                It includes 900 problems as of 14 July 2024, with a new one added approximately every week."
+                            </i>
+                                -WIKIPEDIA
+                        </p>
+                        <p>
+                            My goal is to stay sharp by challenging myself with coding problems and mental exercises. I believe that 
+                            working in small amounts (&#8804; 1 hour) every day is a good strategy for me. From my previous experience, 
+                            I know working too hard for long sessions is an easy way to burn out and lose consistency. 
+                        </p>
+                        <p>
+                            I plan to begin completing problems when I start autumn semester at Ohio State. Quality is more important than quantity in my opinion. 
+                            Using the limited time I have, I prefer one fast and/or elegant solution over three brute-force solutions. I will be publicly posting my progress
+                            here periodically, as a form of accountability. If you (the person visiting my website) are reading this there isn't a 
+                            progress update within the next few months, feel free to send shame via email: Kasper.c.lau@gmail.com. 
+                        </p>
+                        <p>Happy Coding!</p>
+                       
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="alt-progress-container">
+
+            <div id="alt-tab-container">
+                <div class="alt-tab" id="alt-tab1" onclick="openTab('tab1', this.id, 'content1', 'alt-content1')">
+                   <span class="tab-span"></span><p>Kaspie Codes (v1.1)</p>
+                </div>
+                <div class="alt-tab" id="alt-tab2" onclick="openTab('tab2', this.id,'content2', 'alt-content2')">
+                    <span class="tab-span"></span><p>Polynomial</p>
+                </div>
+                <div class="alt-tab" id="alt-tab3" onclick="openTab('tab3', this.id, 'content3', 'alt-content3')">
+                    <span class="tab-span"></span><p>LeetCode</p>
+                </div>
+                <div class="alt-tab" id="alt-tab4" onclick="openTab('tab4', this.id, 'content4', 'alt-content4')">
+                    <span class="tab-span"></span><p>Project Euler</p>
+                </div>
+            </div>
+
+
+            <div id="alt-content1" class="content-container">
+                <div class="content-container-buffer">
+                   
+                </div>
+                <h1 class="monthly-header">June - July 2024 (v1.0)</h1>
+                <div class="update">
+                    <div class="update-column">
+                        <p>I started a web development project over the summer, as I thought it would be an excellent way to learn new skills and build something nice in the process.
+                            However, I disliked the idea of being dependent on subscription services like AWS, G-Cloud, etc. This opened up a new set of challenges that came with self-hosting. 
+                            Here's what I currently use to operate my website: 
+                        </p>
+                        <ul>
+                            <li>Raspberry Pi-5 as the sole hardware given that my portfolio website was not expected to receive a high volume of traffic ( > 1K Requests per day).</li>
+                            <li>Domain name rights bought from Cloudflare, for which I pay 10$ / year (Works Great!)</li>
+                            <li>SSH Daemon from OpenSSH so I can perform updates and server maintenence remotely when I leave for college</li>
+                            <li>Nginx web server software to manage HTTP requests</li>
+                            <li>Ubuntu 24.04 LTS OS</li>
+                        </ul>
+                    </div>
+                    <div class="thin-pic-container">
+                        <img src="progressassets/Progress0.png" alt="CurrentSetup0" class="progress-pic">
+                    </div>
+                    <div class="thin-pic-container">
+                        <img src="progressassets/Progress1.png" alt="CurrentSetup1" class="progress-pic">
+                    </div>
+                </div>
+
+                <h1 class="monthly-header">August 2024 (v1.1)</h1>
+                <div class="update">
+                    <div class="update-column">
+                        <p>So far in my web-devlopment journey, I realize my biggest weakness has been aesthetic design.
+                            There are an insane number of small CSS and Javascript nuances. If I don't know how to use a CSS property
+                            I can always figure it out via Stack Overflow. However, UI design isn't a skill you can master in a few months. 
+                            There are many concepts like 'white spacing' and 'color palettes' that determine if a portfolio looks professional or crude. 
+                        </p>
+                        <p>From time to time, I'll visit the greats like <a href="https://brittanychiang.com/">brittanychiang.com</a> 
+                            or <a href="https://robbowen.digital/">robbowen.digital</a> for inspiration.
+                        </p>
+                        <p>Since the v1.0, I've added a few animations, as well as this progress page that you are reading. The logo typing animation
+                            on the home page was fairly easy to accomplish in Javascript and added some personality to the portfolio. This progress page
+                            serves as a diary of sorts for my ongoing projects and other goals that I have. 
+
+                        </p>
+                        <p>
+                            This month, I leave home to study in college. I will be very busy, but there are a few things I hope to accomplish. 
+                        </p>
+                    </div>
+                </div>
+                <div class="update">
+                    <div class="update-column">
+                        <p>
+                            As it stands, Kasper Codes is a static website with no backend. Whenever I want to make a change or post progress updates on this page, 
+                            I need to edit the static html and change the raw files on my server. Adding a backend database will make posting updates effortless, 
+                            while distributing loading times evenly. For the database, I plan to use something free like Excel or Google Sheets API. 
+                            Google Sheets as a database may seem preposterous (it is), but it's free of cost and storage is on the cloud.
+                            (I don't need to SSH everytime I post progress) 
+        
+                        </p>
+                        <p>
+                            Like most Internet Service Providers, my ISP uses a dynamic IP address, which Cloudflare maps my domain name to. 
+                            While my server has been up (roughly 3 weeks), Comcast has not changed my IP address but they inevitably will in the future, 
+                            which will bring my server offline. To combat this, I plan to write a bash script to update the IP address in the Cloudflare DNS record. 
+                            While I could update the DNS record manually, this would require I monitor the status of my server constantly. To save myself from stress, 
+                            I will automate this process. 
+        
+                        </p>
+                        <div class="wide-pic-container">
+                            <img src="progressassets/Progress2.png" alt="WebTrafficFirstMonth" class="progress-pic">
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div id="alt-content2" class="content-container">
+                <div class="content-container-buffer"></div>
+                <h1 class="monthly-header">June - July 2024 Rational Numbers</h1>
+                <div class="update">
+                    <div class="update-column">
+                        <p>
+                            I had to redesign my Polynomial utility library due to a flaw I noticed recently. Ideally, 
+                            a mathematical data type should have closure under operations. 
+                        </p>
+                        <p>int + int, int - int, int * int, and int / int all return the type int.</p>
+                        <p>
+                            Like integers, polynomials are technically not closed under division. The workaround to this is 
+                            having the method 'Polynomial1.divide(Polynomial2)' change the value of Polynomial1 to the quotient
+                            and return the remainder. This works out well because the quotient and remainder of polynomial division
+                            will always fit the type Polynomial and no data is lost. My problem was my Polynomial class could only represent
+                            integer coefficients while needing to implement polynomial division. This was a pretty serious problem given 
+                            some polynomials could not be divided without yielding non-integer quotients or remainders. 
+                        </p>
+                        <p>
+                            I wrote a <a href="https://github.com/Kaspiper/RationalNumber">Rational Number mini-library</a>, and I quickly got carried away  
+                            and wrote a <a href="https://github.com/Kaspiper/RationalNumber/blob/main/RationalNumberParseAndCalc.java">math parser</a> to test it. 
+                            The rational number data type built consists of a BigInteger (Java math library) numerator and denominator. Representing rational numbers 
+                            as simplified fractions offers superior theoretical precision, making it perfect for polynomial arithmetic.
+                            
+                        </p>
+                        
+                        
+                    </div>
+                </div>
+                <h1 class="monthly-header">August 2024 Factorization of nth-degree Polynomials</h1>
+                <div class="update">
+                    <div class="update-column">
+                        <p>Since implementing polynomials with rational coefficients, I've finished writing functions for integrals and derivatives
+                            as well as division. Now that I can calculate if one polynomial is divisible by another, I have the tools needed to start tackling
+                            some harder problems, namely the polynomial factoring algorithm.
+                        </p>
+                    </div>
+                </div>
+                <div class="update">
+                    <div class="update-column">
+                        <p>When I brought this problem up to my algorithms professor last semester at Ohio State, he described it as a "hard problem" 
+                            though I wasn't sure if he meant 'difficult' or 'NP-Hard'. The modern way of solving high degree polynomials 
+                            involve approximations like <a href="https://en.wikipedia.org/wiki/Newton%27s_method">Newton's Method</a> 
+                            and the <a href="https://en.wikipedia.org/wiki/Bisection_method">Bisection Method</a>. There is also no formula 
+                            to solve polynomials of degree &#8805; 5. By solve, I mean decompose the polynomial into a product of 
+                            irreducible polynomial factors. This is similar to the root-finding problem, only root-finding also isolates complex roots.
+                        
+                        </p>
+                        <p>
+                            If I can, I would much prefer to solve polynomials analytically instead of using approximations. While I don't have much
+                            knowledge in abstract algebra, I have a pretty good idea of where to start looking: 
+                        </p>
+                        <ul>
+                            <li>Galois Fields and Polynomial Rings</li>
+                            <li>Kronecker's Method (1882)</li>
+                            <li>Berlekamp's Algorithm (1967)</li>
+                            <li>Yun's Algorithm (1973)</li>
+                            <li>Cantor-Zassenhaus Algorithm (1981)</li>
+                        </ul>
+                        <p>
+                            I am taking Math 3345 at Ohio State which should strengthen my background in theoretical math. Hopefully by the end of this semester,
+                            I would have learned enough to implement an existing algorithm or something similar. 
+                        </p>
+                    </div>
+                    <div class="square-pic-container">
+                        <iframe height="40%" src="https://www.youtube.com/embed/BSHv9Elk1MU" title="Why There&#39;s &#39;No&#39; Quintic Formula (proof without Galois theory)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe height="40%" src="https://www.youtube.com/embed/C14td3kXdsM" title="Guo. Factoring polynomials over finite fields with linear Galois groups: an additive ..." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div id="alt-content3" class="content-container">
+                <div class="content-container-buffer"></div>
+                <h1 class="monthly-header">August 2024</h1>
+                <div class="update">
+                    <div class="update-column">
+                        <p>
+                            <i>
+                                "LeetCode is an online platform for coding interview preparation. The service provides coding and algorithmic problems intended for users to practice coding.
+                                LeetCode has gained popularity among job seekers and coding enthusiasts as a resource for technical interviews and coding competitions. . . 
+                                LeetCode offers 3236 questions across its three levels of difficulty; with 801 questions categorized as easy, 1679 as medium, and 713 as hard. "
+                            </i> - WIKIPEDIA
+                        </p>
+                        <p>
+                            My goal is to stay sharp by challenging myself with coding problems and mental exercises. I believe that 
+                            working in small amounts (&#8804; 1 hour) every day is a good strategy for me. From my previous experience, 
+                            I know working too hard for long sessions is an easy way to burn out and lose consistency. 
+                        </p>
+                        <p>
+                            I plan to begin completing problems when I start autumn semester at Ohio State. Quality is more important than quantity in my opinion. 
+                            Using the limited time I have, I prefer one fast and/or elegant solution over three brute-force solutions. I will be publicly posting my progress
+                            here periodically, as a form of accountability. If you (the person visiting my website) are reading this there isn't a 
+                            progress update within the next few months, feel free to send shame via email: Kasper.c.lau@gmail.com. 
+                        </p>
+                        <p>Happy Coding!</p>
+                       
+                    </div>
+                </div>
+            </div>
+            <div id="alt-content4" class="content-container">
+                <div class="content-container-buffer"></div>
+                <h1 class="monthly-header">August 2024</h1>
+                <div class="update">
+                    <div class="update-column">
+                        <p>
+                            <i>
+                                "Project Euler (named after Leonhard Euler) is a website dedicated to a series of computational problems intended to be solved with computer programs.
+                                The project attracts graduates and students interested in mathematics and computer programming. Since its creation in 2001 by Colin Hughes, Project Euler has gained notability and popularity worldwide.
+                                It includes 900 problems as of 14 July 2024, with a new one added approximately every week."
+                            </i>
+                                -WIKIPEDIA
+                        </p>
+                        <p>
+                            My goal is to stay sharp by challenging myself with coding problems and mental exercises. I believe that 
+                            working in small amounts (&#8804; 1 hour) every day is a good strategy for me. From my previous experience, 
+                            I know working too hard for long sessions is an easy way to burn out and lose consistency. 
+                        </p>
+                        <p>
+                            I plan to begin completing problems when I start autumn semester at Ohio State. Quality is more important than quantity in my opinion. 
+                            Using the limited time I have, I prefer one fast and/or elegant solution over three brute-force solutions. I will be publicly posting my progress
+                            here periodically, as a form of accountability. If you (the person visiting my website) are reading this there isn't a 
+                            progress update within the next few months, feel free to send shame via email: Kasper.c.lau@gmail.com. 
+                        </p>
+                        <p>Happy Coding!</p>
+                       
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="mobile-progress-container">
+
+            <div id="right-button" onclick="nextSlide()" class="button-container"><img class="icon" src="progressassets/arrowbutton.png" alt="navbutton"></div>
+            <div id="left-button" onclick="previousSlide()" class="button-container"><img class="icon" src="progressassets/arrowbutton.png" alt="navbutton"></div>
+
+
+            <div id="mobile-content1" class="mobile-content-container">
+                <div class="content-container-buffer">
+                   
+                </div>
+                <h1 class="monthly-header">June - July 2024 (v1.0)</h1>
+                <div class="update">
+                    <div class="update-column">
+                        <p>I started a web development project over the summer, as I thought it would be an excellent way to learn new skills and build something nice in the process.
+                            However, I disliked the idea of being dependent on subscription services like AWS, G-Cloud, etc. This opened up a new set of challenges that came with self-hosting. 
+                            Here's what I currently use to operate my website: 
+                        </p>
+                        <ul>
+                            <li>Raspberry Pi-5 as the sole hardware given that my portfolio website was not expected to receive a high volume of traffic ( > 1K Requests per day).</li>
+                            <li>Domain name rights bought from Cloudflare, for which I pay 10$ / year (Works Great!)</li>
+                            <li>SSH Daemon from OpenSSH so I can perform updates and server maintenence remotely when I leave for college</li>
+                            <li>Nginx web server software to manage HTTP requests</li>
+                            <li>Ubuntu 24.04 LTS OS</li>
+                        </ul>
+                    </div>
+                    <div class="thin-pic-container">
+                        <img src="progressassets/Progress0.png" alt="CurrentSetup0" class="progress-pic">
+                    </div>
+                    <div class="thin-pic-container">
+                        <img src="progressassets/Progress1.png" alt="CurrentSetup1" class="progress-pic">
+                    </div>
+                </div>
+
+                <h1 class="monthly-header">August 2024 (v1.1)</h1>
+                <div class="update">
+                    <div class="update-column">
+                        <p>So far in my web-devlopment journey, I realize my biggest weakness has been aesthetic design.
+                            There are an insane number of small CSS and Javascript nuances. If I don't know how to use a CSS property
+                            I can always figure it out via Stack Overflow. However, UI design isn't a skill you can master in a few months. 
+                            There are many concepts like 'white spacing' and 'color palettes' that determine if a portfolio looks professional or crude. 
+                        </p>
+                        <p>From time to time, I'll visit the greats like <a href="https://brittanychiang.com/">brittanychiang.com</a> 
+                            or <a href="https://robbowen.digital/">robbowen.digital</a> for inspiration.
+                        </p>
+                        <p>Since the v1.0, I've added a few animations, as well as this progress page that you are reading. The logo typing animation
+                            on the home page was fairly easy to accomplish in Javascript and added some personality to the portfolio. This progress page
+                            serves as a diary of sorts for my ongoing projects and other goals that I have. 
+
+                        </p>
+                        <p>
+                            This month, I leave home to study in college. I will be very busy, but there are a few things I hope to accomplish. 
+                        </p>
+                    </div>
+                </div>
+                <div class="update">
+                    <div class="update-column">
+                        <p>
+                            As it stands, Kasper Codes is a static website with no backend. Whenever I want to make a change or post progress updates on this page, 
+                            I need to edit the static html and change the raw files on my server. Adding a backend database will make posting updates effortless, 
+                            while distributing loading times evenly. For the database, I plan to use something free like Excel or Google Sheets API. 
+                            Google Sheets as a database may seem preposterous (it is), but it's free of cost and storage is on the cloud.
+                            (I don't need to SSH everytime I post progress) 
+        
+                        </p>
+                        <p>
+                            Like most Internet Service Providers, my ISP uses a dynamic IP address, which Cloudflare maps my domain name to. 
+                            While my server has been up (roughly 3 weeks), Comcast has not changed my IP address but they inevitably will in the future, 
+                            which will bring my server offline. To combat this, I plan to write a bash script to update the IP address in the Cloudflare DNS record. 
+                            While I could update the DNS record manually, this would require I monitor the status of my server constantly. To save myself from stress, 
+                            I will automate this process. 
+        
+                        </p>
+                        <div class="wide-pic-container">
+                            <img src="progressassets/Progress2.png" alt="WebTrafficFirstMonth" class="progress-pic">
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div id="mobile-content2" class="mobile-content-container">
+                <div class="content-container-buffer"></div>
+                <h1 class="monthly-header">June - July 2024 Rational Numbers</h1>
+                <div class="update">
+                    <div class="update-column">
+                        <p>
+                            I had to redesign my Polynomial utility library due to a flaw I noticed recently. Ideally, 
+                            a mathematical data type should have closure under operations. 
+                        </p>
+                        <p>int + int, int - int, int * int, and int / int all return the type int.</p>
+                        <p>
+                            Like integers, polynomials are technically not closed under division. The workaround to this is 
+                            having the method 'Polynomial1.divide(Polynomial2)' change the value of Polynomial1 to the quotient
+                            and return the remainder. This works out well because the quotient and remainder of polynomial division
+                            will always fit the type Polynomial and no data is lost. My problem was my Polynomial class could only represent
+                            integer coefficients while needing to implement polynomial division. This was a pretty serious problem given 
+                            some polynomials could not be divided without yielding non-integer quotients or remainders. 
+                        </p>
+                        <p>
+                            I wrote a <a href="https://github.com/Kaspiper/RationalNumber">Rational Number mini-library</a>, and I quickly got carried away  
+                            and wrote a <a href="https://github.com/Kaspiper/RationalNumber/blob/main/RationalNumberParseAndCalc.java">math parser</a> to test it. 
+                            The rational number data type built consists of a BigInteger (Java math library) numerator and denominator. Representing rational numbers 
+                            as simplified fractions offers superior theoretical precision, making it perfect for polynomial arithmetic.
+                            
+                        </p>
+                        
+                        
+                    </div>
+                </div>
+                <h1 class="monthly-header">August 2024 Factorization of nth-degree Polynomials</h1>
+                <div class="update">
+                    <div class="update-column">
+                        <p>Since implementing polynomials with rational coefficients, I've finished writing functions for integrals and derivatives
+                            as well as division. Now that I can calculate if one polynomial is divisible by another, I have the tools needed to start tackling
+                            some harder problems, namely the polynomial factoring algorithm.
+                        </p>
+                    </div>
+                </div>
+                <div class="update">
+                    <div class="update-column">
+                        <p>When I brought this problem up to my algorithms professor last semester at Ohio State, he described it as a "hard problem" 
+                            though I wasn't sure if he meant 'difficult' or 'NP-Hard'. The modern way of solving high degree polynomials 
+                            involve approximations like <a href="https://en.wikipedia.org/wiki/Newton%27s_method">Newton's Method</a> 
+                            and the <a href="https://en.wikipedia.org/wiki/Bisection_method">Bisection Method</a>. There is also no formula 
+                            to solve polynomials of degree &#8805; 5. By solve, I mean decompose the polynomial into a product of 
+                            irreducible polynomial factors. This is similar to the root-finding problem, only root-finding also isolates complex roots.
+                        
+                        </p>
+                        <p>
+                            If I can, I would much prefer to solve polynomials analytically instead of using approximations. While I don't have much
+                            knowledge in abstract algebra, I have a pretty good idea of where to start looking: 
+                        </p>
+                        <ul>
+                            <li>Galois Fields and Polynomial Rings</li>
+                            <li>Kronecker's Method (1882)</li>
+                            <li>Berlekamp's Algorithm (1967)</li>
+                            <li>Yun's Algorithm (1973)</li>
+                            <li>Cantor-Zassenhaus Algorithm (1981)</li>
+                        </ul>
+                        <p>
+                            I am taking Math 3345 at Ohio State which should strengthen my background in theoretical math. Hopefully by the end of this semester,
+                            I would have learned enough to implement an existing algorithm or something similar. 
+                        </p>
+                    </div>
+                    <div class="square-pic-container">
+                        <iframe height="40%" src="https://www.youtube.com/embed/BSHv9Elk1MU" title="Why There&#39;s &#39;No&#39; Quintic Formula (proof without Galois theory)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe height="40%" src="https://www.youtube.com/embed/C14td3kXdsM" title="Guo. Factoring polynomials over finite fields with linear Galois groups: an additive ..." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-content3" class="mobile-content-container">
+                <div class="content-container-buffer"></div>
+                <h1 class="monthly-header">August 2024</h1>
+                <div class="update">
+                    <div class="update-column">
+                        <p>
+                            <i>
+                                "LeetCode is an online platform for coding interview preparation. The service provides coding and algorithmic problems intended for users to practice coding.
+                                LeetCode has gained popularity among job seekers and coding enthusiasts as a resource for technical interviews and coding competitions. . . 
+                                LeetCode offers 3236 questions across its three levels of difficulty; with 801 questions categorized as easy, 1679 as medium, and 713 as hard. "
+                            </i> - WIKIPEDIA
+                        </p>
+                        <p>
+                            My goal is to stay sharp by challenging myself with coding problems and mental exercises. I believe that 
+                            working in small amounts (&#8804; 1 hour) every day is a good strategy for me. From my previous experience, 
+                            I know working too hard for long sessions is an easy way to burn out and lose consistency. 
+                        </p>
+                        <p>
+                            I plan to begin completing problems when I start autumn semester at Ohio State. Quality is more important than quantity in my opinion. 
+                            Using the limited time I have, I prefer one fast and/or elegant solution over three brute-force solutions. I will be publicly posting my progress
+                            here periodically, as a form of accountability. If you (the person visiting my website) are reading this there isn't a 
+                            progress update within the next few months, feel free to send shame via email: Kasper.c.lau@gmail.com. 
+                        </p>
+                        <p>Happy Coding!</p>
+                       
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-content4" class="mobile-content-container">
+                <div class="content-container-buffer"></div>
+                <h1 class="monthly-header">August 2024</h1>
+                <div class="update">
+                    <div class="update-column">
+                        <p>
+                            <i>
+                                "Project Euler (named after Leonhard Euler) is a website dedicated to a series of computational problems intended to be solved with computer programs.
+                                The project attracts graduates and students interested in mathematics and computer programming. Since its creation in 2001 by Colin Hughes, Project Euler has gained notability and popularity worldwide.
+                                It includes 900 problems as of 14 July 2024, with a new one added approximately every week."
+                            </i>
+                                -WIKIPEDIA
+                        </p>
+                        <p>
+                            My goal is to stay sharp by challenging myself with coding problems and mental exercises. I believe that 
+                            working in small amounts (&#8804; 1 hour) every day is a good strategy for me. From my previous experience, 
+                            I know working too hard for long sessions is an easy way to burn out and lose consistency. 
+                        </p>
+                        <p>
+                            I plan to begin completing problems when I start autumn semester at Ohio State. Quality is more important than quantity in my opinion. 
+                            Using the limited time I have, I prefer one fast and/or elegant solution over three brute-force solutions. I will be publicly posting my progress
+                            here periodically, as a form of accountability. If you (the person visiting my website) are reading this there isn't a 
+                            progress update within the next few months, feel free to send shame via email: Kasper.c.lau@gmail.com. 
+                        </p>
+                        <p>Happy Coding!</p>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+ 
+    <section id="contact" class="footer">
+        <div class="stripe"></div>
+        <div class="contact-container">
+            <div class="footer-bar" id="footer-top">
+                <hr>
+                <h6>Currently seeking internships<span>, co-ops, and other employment opportunities</span></h6>
+                <hr>
+            </div>
+
+            <div class="email-container-effect">
+                <div class="email-container" onclick="location.href='mailto:Kasper.c.lau@gmail.com'">
+                    <img src="/assets/email.png" alt="email icon" class="icon">
+                    <h4>Kasper.c.lau@gmail.com</h4>
+                </div>
+            </div>
+            <div class="footer-bar" id="footer-bottom">
+                <hr>
+                <img src="/assets/linkedin.png" alt="linkedin icon" class="icon" onclick="location.href='https://www.linkedin.com/in/kasper-lau-8aa416291/'">
+                <img src="/assets/github.png" alt="github icon" class="icon" onclick="location.href='https://github.com/Kaspiper'">
+                <hr>
+            </div>
+        </div>
+        
+    </section>
+    <div class="stripe"></div>
+    
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
