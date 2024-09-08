@@ -525,6 +525,9 @@ section{
     padding: 2%;
 }
 .project-description p{
+    /* font-family: "Source Code Pro", monospace; */
+    /* font-family: "Work Sans", monospace; */
+    font-family: "Work Sans", monospace;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
